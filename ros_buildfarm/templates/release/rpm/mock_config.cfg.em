@@ -63,4 +63,15 @@ enabled=0
 skip_if_unavailable=False
 
 @[end if]@
+@[if os_name == 'rhel' and os_code_name == '8']@
+[appstream-8.6]
+name=AlmaLinux 8.6 - AppStream
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.6/appstream
+# baseurl=https://repo.almalinux.org/almalinux/8.6/AppStream/$basearch/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///usr/share/distribution-gpg-keys/alma/RPM-GPG-KEY-AlmaLinux-8
+fastestmirror=1
+
+@[end if]
 """
